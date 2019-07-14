@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MusicN'Lyrics | Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <style>
+  .btnCus {
+    margin-bottom: 30px;
+    margin-left: 300%;
+  }
+
+  tr, td {
+    text-align: center;
+  }
+
+  </style>
+<body>
+
+{{> navbar}}
+
+<div class="container-fluid">
+
+  <div class="card w-100 mb-3">
+    <div class="card-body m-4 p-4">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-heart"></i> Results <i class="fas fa-heart"></i>
+        <p class="lead text-center">Here is the search results</p>
+      </h1>
+    </div>
+  </div>
+
+  <div class="card w-100 mb-3">
+    <div class="card-body m-4 p-4">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr><th>Artist</th><th>Track</th><th>Album</th><th>Lyrics</th></tr>
+          {{#list items}}<tr><td style="width: 20%">{{artist}}</td><td style="width: 20%">{{track}}</td><td style="width: 20%">{{album}}</td><td style="width: 40%"><form action="/history"><a href="/history">See Lyrics</a></td></tr>{{/list}}
+        </thead>
+      </table>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

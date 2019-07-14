@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MusicN'Lyrics | Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  </head>
+
+<body>
+
+{{> navbar}}
+
+
+<div class="container-fluid">
+  <div class="card w-100 mb-3">
+    <div class="card-body m-4 p-4">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-music"></i> Search for A Song <i class="fas fa-music"></i>
+        <p class="lead text-center">Get the lyrics for any song</p>
+        </h1>
+      </div>
+  </div>
+
+  <div class="card w-100">
+    <div class="card-body m-4 p-4">
+      <form id="form" action="/" method="post">
+      <div class="form-group">
+        <input id="artist" name="artistname" class="form-control" type="text" placeholder="Artist Name..." />
+        <br />
+        <input id="track" name="trackname" class="form-control" type="text" placeholder="Song Title..." />
+      </div>
+        <button class="btn btn-danger btn-lg btn-block mb-5" type="submit" formaction="/gettracks">Get Track Lyrics</button>
+    </form>
+      </div>
+  </div>
+</div>
+
+
+</body>
+</html>
